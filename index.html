@@ -4,20 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jokenpo</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container">
+    <div class="bg-succsess w-50 m-auto my-5">
         <h1 class="text-center">Jokenpo</h1>
 
 
-        <div id="usuario" class="row  w-50 m-auto">
+        <div id="usuario" class="row  w-50 m-auto mb-5">
             <div class="mb-3 col"><input type="button" value="Pedra" class="btn btn-primary btn-lg" onclick="jokenpo('PEDRA')"></div>
             <div class="mb-3 col"><input type="button" value="Papel" class="btn btn-primary btn-lg" onclick="jokenpo('PAPEL')"></div>
             <div class="mb-3 col"><input type="button" value="Tesoura" class="btn btn-primary btn-lg" onclick="jokenpo('TESOURA')"></div>
         </div>
 
-        <div id="resultado" > 
+        <div id="resultado" class="w-50 m-auto" > 
 
         </div>
     </div>
@@ -33,7 +34,7 @@
             let resultado = document.getElementById('resultado')
             let ganhador;
             // console.log(computador)
-            resultado.innerHTML = ""
+            resultado.innerHTML = '<div id="loader" class="loader"></div>'
             switch (computador)
             {
                 case 1:
