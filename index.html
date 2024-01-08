@@ -11,6 +11,29 @@
     <div class="bg-succsess  my-5" id="container">
         <h1 class="text-center">Jokenpo</h1>
 
+        <div class="placar row w-100 m-auto" >
+            <!-- <div class="mb-3 col">
+                <h3>Computador</h3>
+                <div class="fw-bold  pontuacao">5</div>
+            </div>
+            <div class="mb-3 col">
+                <h3>Usuario</h3>
+                <div class="fw-bold m-auto  pontuacao">2</div>
+            </div> -->
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Computador</th>
+                    <th>Usuario</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+
+
+                </tbody>
+              </table>
+        </div>
 
         <div id="usuario" class="row m-auto w-100">
             <div class="mb-3 col-12"><input type="button" value="Pedra" class="btn btn-primary btn-lg w-100" onclick="jokenpo('PEDRA')"></div>
@@ -27,12 +50,17 @@
 
 
     <script>
+        var cont = 0
         function jokenpo(x)
         {
             let computador = Math.floor(Math.random() * 3) + 1
             let usuario = x
             let resultado = document.getElementById('resultado')
             let ganhador;
+            let resComp;
+            let resUsu;
+            let tabela = document.getElementById('tbody')
+          
             // console.log(computador)
             resultado.innerHTML = '<div id="loader" class="loader"></div>'
             switch (computador)
@@ -60,6 +88,9 @@
                 console.log(`COMPUTADOR : ${computador}`)
                 console.log(`USUARIO : ${usuario}`)
                 ganhador = "Empate"
+
+                resComp = "Empate"
+                resUsu = "Empate"
             }
             
             // VITORIAS DO COMPUTADOR
@@ -70,6 +101,8 @@
                 console.log(`USUARIO : ${usuario}`)
 
                 ganhador = "Computador"
+                resComp = "Vencedor"
+                resUsu = "Perdedor"
             }else 
 
             if(computador == "TESOURA" && usuario == "PAPEL")
@@ -78,6 +111,8 @@
                 console.log(`COMPUTADOR : ${computador}`)
                 console.log(`USUARIO : ${usuario}`)
                 ganhador = "Computador"
+                resComp = "Vencedor"
+                resUsu = "Perdedor"
             }else 
             if(computador == "PAPEL" && usuario == "PEDRA")
             {
@@ -85,6 +120,8 @@
                 console.log(`COMPUTADOR : ${computador}`)
                 console.log(`USUARIO : ${usuario}`)
                 ganhador = "Computador"
+                resComp = "Vencedor"
+                resUsu = "Perdedor"
             }
 
 
@@ -98,6 +135,8 @@
                 console.log(`USUARIO : ${usuario}`)
 
                 ganhador = "Usuario"
+                resComp = "Perdedor"
+                resUsu = "Vencedor"
             }
             if(computador == "TESOURA" && usuario == "PEDRA")
             {
@@ -105,6 +144,8 @@
                 console.log(`COMPUTADOR : ${computador}`)
                 console.log(`USUARIO : ${usuario}`)
                 ganhador = "Usuario"
+                resComp = "Perdedor"
+                resUsu = "Vencedor"
             }else 
             if(computador == "PEDRA" && usuario == "PAPEL")
             {
@@ -112,11 +153,16 @@
                 console.log(`COMPUTADOR : ${computador}`)
                 console.log(`USUARIO : ${usuario}`)
                 ganhador = "Usuario"
+                resComp = "Perdedor"
+                resUsu = "Vencedor"
             }
 
 
             setTimeout(function() {
+                cont ++;
                 resultado.innerHTML = `    <div class="alert alert-primary"><p>O vencedor foi : <strong>${ganhador}</strong></p><p>O Usuario escolheu <strong>${usuario}</strong> e o computador escolheu <strong>${computador}</strong></p></div>`
+
+                tbody.innerHTML += `<tr><th scope="row">${cont}</th><td>${resComp}</td><td>${resUsu}</td></tr> `
             }, 1000)
             
 
