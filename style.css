@@ -9,6 +9,15 @@
     margin: auto;
 }
 
+#container
+{
+    max-width: 500px;
+    margin: auto;
+}
+
+
+
+
 @keyframes loading{
     to{
         transform: rotate(360deg);
