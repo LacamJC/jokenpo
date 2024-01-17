@@ -1,2 +1,9 @@
 # Jokenpo
-Projeto utilizando JS para fazer um Pedra, Papel ou Tesoura
+Um jogo simles de jokenpo contra um algoritmo aleatorio
+
+### Tecnologias 
+- HTML
+- CSS
+- JAVASCRIPT
+
+### Screenshots
