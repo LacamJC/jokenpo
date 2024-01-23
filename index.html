@@ -13,11 +13,11 @@
 
         <div class="placar row w-100 m-auto" >
             <!-- <div class="mb-3 col">
-                <h3>Computador</h3>
+                <h3>joao</h3>
                 <div class="fw-bold  pontuacao">5</div>
             </div>
             <div class="mb-3 col">
-                <h3>Usuario</h3>
+                <h3>davi</h3>
                 <div class="fw-bold m-auto  pontuacao">2</div>
             </div> -->
             <table class="table">
@@ -35,7 +35,7 @@
               </table>
         </div>
 
-        <div id="usuario" class="row m-auto w-100">
+        <div id="davi" class="row m-auto w-100">
             <div class="mb-3 col-12"><input type="button" value="Pedra" class="btn btn-primary btn-lg w-100" onclick="jokenpo('PEDRA')"></div>
             <div class="mb-3 col-12"><input type="button" value="Papel" class="btn btn-primary btn-lg w-100" onclick="jokenpo('PAPEL')"></div>
             <div class="mb-3 col-12"><input type="button" value="Tesoura" class="btn btn-primary btn-lg w-100" onclick="jokenpo('TESOURA')"></div>
@@ -53,106 +53,106 @@
         var cont = 0
         function jokenpo(x)
         {
-            let computador = Math.floor(Math.random() * 3) + 1
-            let usuario = x
+            let joao = Math.floor(Math.random() * 3) + 1
+            let davi = x
             let resultado = document.getElementById('resultado')
             let ganhador;
             let resComp;
             let resUsu;
             let tabela = document.getElementById('tbody')
           
-            // console.log(computador)
+            // console.log(joao)
             resultado.innerHTML = '<div id="loader" class="loader"></div>'
-            switch (computador)
+            switch (joao)
             {
                 case 1:
                     // console.log("PEDRA")
-                    computador = "PEDRA"
+                    joao = "PEDRA"
                     break;
                     case 2: 
                         // console.log("PAPEL")
-                        computador = "PAPEL"
+                        joao = "PAPEL"
                         break; 
                         case 3: 
                             // console.log("TESOURA")
-                            computador = "TESOURA"
+                            joao = "TESOURA"
                             break;
             }
 
-            // console.log(`COMPUTADOR : ${computador}`)
-            // console.log(`USUARIO : ${usuario}`)
+            // console.log(`joao : ${joao}`)
+            // console.log(`davi : ${davi}`)
 
-            if(computador == usuario)
+            if(joao == davi)
             {
                 console.log("EMPATE")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
                 ganhador = "Empate"
 
                 resComp = "Empate"
                 resUsu = "Empate"
             }
             
-            // VITORIAS DO COMPUTADOR
-            else if(computador == "PEDRA" && usuario == "TESOURA")
+            // VITORIAS DO joao
+            else if(joao == "PEDRA" && davi == "TESOURA")
             {
-                console.log("COMPUTADOR VENCEU")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
+                console.log("joao VENCEU")
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
 
-                ganhador = "Computador"
+                ganhador = "joao"
                 resComp = "Vencedor"
                 resUsu = "Perdedor"
             }else 
 
-            if(computador == "TESOURA" && usuario == "PAPEL")
+            if(joao == "TESOURA" && davi == "PAPEL")
             {
-                console.log("COMPUTADOR VENCEU")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
-                ganhador = "Computador"
+                console.log("joao VENCEU")
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
+                ganhador = "joao"
                 resComp = "Vencedor"
                 resUsu = "Perdedor"
             }else 
-            if(computador == "PAPEL" && usuario == "PEDRA")
+            if(joao == "PAPEL" && davi == "PEDRA")
             {
-                console.log("COMPUTADOR VENCEU")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
-                ganhador = "Computador"
+                console.log("joao VENCEU")
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
+                ganhador = "joao"
                 resComp = "Vencedor"
                 resUsu = "Perdedor"
             }
 
 
             
-            // VITORIAS DO USUARIO
+            // VITORIAS DO davi
             else 
-            if(computador == "PAPEL" && usuario == "TESOURA")
+            if(joao == "PAPEL" && davi == "TESOURA")
             {
-                console.log("USUARIO VENCEU")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
+                console.log("davi VENCEU")
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
 
-                ganhador = "Usuario"
+                ganhador = "davi"
                 resComp = "Perdedor"
                 resUsu = "Vencedor"
             }
-            if(computador == "TESOURA" && usuario == "PEDRA")
+            if(joao == "TESOURA" && davi == "PEDRA")
             {
-                console.log("USUARIO VENCEU")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
-                ganhador = "Usuario"
+                console.log("davi VENCEU")
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
+                ganhador = "davi"
                 resComp = "Perdedor"
                 resUsu = "Vencedor"
             }else 
-            if(computador == "PEDRA" && usuario == "PAPEL")
+            if(joao == "PEDRA" && davi == "PAPEL")
             {
-                console.log("USUARIO VENCEU")
-                console.log(`COMPUTADOR : ${computador}`)
-                console.log(`USUARIO : ${usuario}`)
-                ganhador = "Usuario"
+                console.log("davi VENCEU")
+                console.log(`joao : ${joao}`)
+                console.log(`davi : ${davi}`)
+                ganhador = "davi"
                 resComp = "Perdedor"
                 resUsu = "Vencedor"
             }
@@ -160,7 +160,7 @@
 
             setTimeout(function() {
                 cont ++;
-                resultado.innerHTML = `    <div class="alert alert-primary"><p>O vencedor foi : <strong>${ganhador}</strong></p><p>O Usuario escolheu <strong>${usuario}</strong> e o computador escolheu <strong>${computador}</strong></p></div>`
+                resultado.innerHTML = `    <div class="alert alert-primary"><p>O vencedor foi : <strong>${ganhador}</strong></p><p>O davi escolheu <strong>${davi}</strong> e o joao escolheu <strong>${joao}</strong></p></div>`
 
                 tbody.innerHTML += `<tr><th scope="row">${cont}</th><td>${resComp}</td><td>${resUsu}</td></tr> `
             }, Math.floor(Math.random() * 9001) + 1000)
