@@ -22,6 +22,15 @@
     align-items: center;
 }
 
+.placar
+{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+tbody:last-child{
+    background-color: red;
+}
 
 
 @keyframes loading{
